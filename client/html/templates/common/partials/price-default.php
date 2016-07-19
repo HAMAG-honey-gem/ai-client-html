@@ -74,6 +74,9 @@ $first = true;
 			<?= $enc->html( sprintf( $format['quantity'], $priceItem->getQuantity() ), $enc::TRUST ); ?>
 		</span>
 
+		<span class="prefix">
+			<?= $this->translate('client', 'from'); ?>
+		</span>
 		<span class="value">
 			<?= $enc->html( sprintf( $format['value'], $this->number( $priceItem->getValue() ), $currency ), $enc::TRUST ); ?>
 		</span>

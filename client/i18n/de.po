@@ -333,6 +333,9 @@ msgstr "Filter"
 msgid "First name"
 msgstr "Vorname"
 
+msgid "from"
+msgstr "ab"
+
 msgid "GB999999973"
 msgstr "DE999999999"
 
