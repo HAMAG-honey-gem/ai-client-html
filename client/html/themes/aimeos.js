@@ -1068,7 +1068,7 @@ AimeosCatalogFilter = {
 	}
 };
 
-
+AimeosCatalogFilter.MIN_INPUT_LEN = 2;
 
 
 
