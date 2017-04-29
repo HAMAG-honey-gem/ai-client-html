@@ -16,7 +16,9 @@ $services = $this->summaryBasket->getServices();
 <div class="common-summary content-block">
 
 	<div class="common-summary-address container">
-		<div class="item payment">
+		<table><tbody>
+		<tr>
+		<td class="item payment">
 			<div class="header">
 				<h3><?= $enc->html( $this->translate( 'client', 'Billing address' ), $enc::TRUST ); ?></h3>
 			</div>
@@ -43,9 +45,9 @@ $services = $this->summaryBasket->getServices();
 					); ?>
 				<?php endif; ?>
 			</div>
-		</div><!--
+		</td>
 
-		--><div class="item delivery">
+		<td class="item delivery">
 			<div class="header">
 				<h3><?= $enc->html( $this->translate( 'client', 'Delivery address' ), $enc::TRUST ); ?></h3>
 			</div>
@@ -60,12 +62,16 @@ $services = $this->summaryBasket->getServices();
 					<?= $enc->html( $this->translate( 'client', 'like billing address' ), $enc::TRUST ); ?>
 				<?php endif; ?>
 			</div>
-		</div>
+		</td>
+		</tr>
+		</tbody></table>
 	</div>
 
 
 	<div class="common-summary-service container">
-		<div class="item delivery">
+		<table><tbody>
+		<tr>
+		<td class="item delivery">
 			<div class="header">
 				<h3><?= $enc->html( $this->translate( 'client', 'delivery' ), $enc::TRUST ); ?></h3>
 			</div>
@@ -92,9 +98,9 @@ $services = $this->summaryBasket->getServices();
 					); ?>
 				<?php endif; ?>
 			</div>
-		</div><!--
+		</td>
 
-		--><div class="item payment">
+		<td class="item payment">
 			<div class="header">
 				<h3><?= $enc->html( $this->translate( 'client', 'payment' ), $enc::TRUST ); ?></h3>
 			</div>
@@ -107,12 +113,15 @@ $services = $this->summaryBasket->getServices();
 					); ?>
 				<?php endif; ?>
 			</div>
-		</div>
+		</td>
+		</tr>
+		</tbody></table>
 
 	</div>
 
 
 	<div class="common-summary-additional container">
+<!-- free vertical space
 		<div class="item coupon">
 			<div class="header">
 				<h3><?= $enc->html( $this->translate( 'client', 'Coupon codes' ), $enc::TRUST ); ?></h3>
@@ -127,9 +136,10 @@ $services = $this->summaryBasket->getServices();
 					</ul>
 				<?php endif; ?>
 			</div>
-		</div><!--
+		</div>
+-->
 
-		--><div class="item comment">
+		<div class="item comment">
 			<div class="header">
 				<h3><?= $enc->html( $this->translate( 'client', 'Your comment' ), $enc::TRUST ); ?></h3>
 			</div>

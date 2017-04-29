@@ -75,6 +75,7 @@ $title = $this->translate( 'client', 'E-mail notification' );
 
 			<?= $this->block()->get( 'email/common/html/summary' ); ?>
 
+			<!-- free vertical space
 			<p class="email-common-outro content-block">
 				<?= $enc->html( nl2br( $this->translate( 'client', 'If you have any questions, please reply to this e-mail' ) ), $enc::TRUST ); ?>
 			</p>
@@ -82,6 +83,7 @@ $title = $this->translate( 'client', 'E-mail notification' );
 			<p class="email-common-legal content-block">
 				<?= nl2br( $enc->html( $this->translate( 'client',  'All orders are subject to our terms and conditions.' ), $enc::TRUST ) ); ?>
 			</p>
+			-->
 
 		</div>
 

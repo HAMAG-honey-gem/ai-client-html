@@ -76,6 +76,17 @@
 	width: 50%;
 	clear: both;
 }
+.common-summary td.item {
+	width: 49%;
+	min-width: 5rem;
+}
+.common-summary .comment.item,
+.common-summary table {
+	width: 100%;
+}
+.common-summary .coupon~.comment.item {
+	width: 48.75%;
+}
 
 .common-summary .item li {
 	vertical-align: top;
