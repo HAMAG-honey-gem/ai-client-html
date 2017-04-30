@@ -63,6 +63,9 @@ msgstr "Option"
 msgid "clamping_range"
 msgstr "Spannbereich"
 
+msgid "custom"
+msgstr "benutzerdefiniert"
+
 msgid "diameter"
 msgstr "Durchmesser"
 
@@ -77,6 +80,9 @@ msgstr "Lochdurchmesser"
 
 msgid "lining_thickness"
 msgstr "Belagdicke"
+
+msgid "multiple"
+msgstr "mehrere"
 
 msgid "note"
 msgstr "Hinweis"
@@ -102,11 +108,16 @@ msgstr "Text"
 msgid "type"
 msgstr "Typ"
 
+msgid "use text field below"
+msgstr "verwende Textfeld weiter unten"
+
 msgid "voltage"
 msgstr "Spannung"
 
 msgid "weight"
 msgstr "Gewicht"
+
+
 
 
 #. Order type value
