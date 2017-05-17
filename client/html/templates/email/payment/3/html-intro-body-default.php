@@ -16,7 +16,7 @@ $key = 'pay:' . $order->getPaymentStatus();
 $status = $this->translate( 'client/code', $key );
 $format = $this->translate( 'client', 'Y-m-d' );
 
-$string = sprintf( $msg, $order->getId(), date_create( $order->getTimeCreated() )->format( $format ), $status );
+$string = "";//sprintf( $msg, $order->getId(), date_create( $order->getTimeCreated() )->format( $format ), $status );
 
 
 ?>

@@ -18,7 +18,7 @@ $status = $this->translate( 'client/code', $key );
 $format = $this->translate( 'client', 'Y-m-d' );
 
 $intro = sprintf( $msg, $order->getId(), date_create( $order->getTimeCreated() )->format( $format ), $status );
-$details = sprintf( $msg2, $order->getId(), date_create( $order->getTimeCreated() )->format( $format ), $status );
+$details = "";//sprintf( $msg2, $order->getId(), date_create( $order->getTimeCreated() )->format( $format ), $status );
 
 
 ?>
