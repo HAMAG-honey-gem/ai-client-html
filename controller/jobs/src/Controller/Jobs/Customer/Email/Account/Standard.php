@@ -61,6 +61,8 @@ class Standard
 		{
 			try
 			{
+				$str = sprintf( 'msg: "', print_r($msg, true) );
+				$context->getLogger()->log( $str );
 				if( ( $list = json_decode( $msg->getBody(), true ) ) === null )
 				{
 					$str = sprintf( 'Invalid JSON encode message: %1$s', $msg->getBody() );
@@ -69,8 +71,12 @@ class Standard
 
 				$password = ( isset( $list['customer.password'] ) ? $list['customer.password'] : '' );
 				$item = $custManager->createItem();
+				$str = sprintf( 'Array to construct item from: "', $list );
+				$context->getLogger()->log( $str );
 				$item->fromArray( $list );
 
+				$str = sprintf( 'Sent customer account e-mail to "%1$s"', $item->getPaymentAddress()->getEmail() );
+				$context->getLogger()->log( $str );
 				$this->sendEmail( $context, $item, $password );
 
 				$str = sprintf( 'Sent customer account e-mail to "%1$s"', $item->getPaymentAddress()->getEmail() );
@@ -116,10 +122,16 @@ class Standard
 	{
 		$address = $item->getPaymentAddress();
 
+		$str = 'item->getPaymentAddress(): ' . print_r($item, true);
+		$context->getLogger()->log( $str );
+
 		$view = $context->getView();
 		$view->extAddressItem = $address;
 		$view->extAccountCode = $item->getCode();
 		$view->extAccountPassword = $password;
+		$str = 'view->extAccountCode: ' . print_r($view->extAccountCode, true);
+		$context->getLogger()->log( $str );
+
 
 		$helper = new \Aimeos\MW\View\Helper\Translate\Standard( $view, $context->getI18n( $address->getLanguageId() ) );
 		$view->addHelper( 'translate', $helper );
@@ -134,6 +146,12 @@ class Standard
 		$client->setView( $view );
 		$client->getHeader();
 		$client->getBody();
+
+		$str = 'view->extAddressItemPaymentAddress: ' . print_r($view->extAddressItem, true);
+		$context->getLogger()->log( $str );
+
+		$str = 'view->extAddressItemPaymentAddress->getEmail(): ' . $view->extAddressItem->getEmail();
+		$context->getLogger()->log( $str );
 
 		$mailer->send( $message );
 	}

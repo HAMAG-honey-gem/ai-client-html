@@ -290,6 +290,7 @@ class Standard
 
 			$msg = $item->toArray();
 			$msg['customer.password'] = $password;
+			echo "item: ". print_r($item,true) ."\r\n<br/>msg: " . print_r($msg, true);
 			$context->getMessageQueue( 'mq-email', 'customer/email/account' )->add( json_encode( $msg ) );
 		}
 
