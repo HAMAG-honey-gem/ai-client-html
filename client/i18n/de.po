@@ -1045,7 +1045,7 @@ msgstr "Produkt ist zur Zeit ausverkauft"
 
 #. / code for "product is available (without stock limit)"
 msgid "stock-unlimited"
-msgstr "Produkt ist verfügbar"
+msgstr "Bestellbar | Bitte fragen Sie bei Selbstabholung vorher nach Lagerbestand."
 
 #, php-format
 msgid "summary"
