@@ -34,11 +34,14 @@ foreach( $this->get( 'suggestItems', [] ) as $id => $productItem )
 	$items[] = array(
 		'label' => $productItem->getName(),
 		'html' => '
-			<li class="aimeos catalog-suggest">
-				<a class="suggest-item" href="' . $enc->attr( $this->url( $target, $cntl, $action, array( 'd_prodid' => $id ), [], $config ) ).'">
-					<div class="item-name">' . $enc->html( $productItem->getName() ) . '</div>
+			<li class="aimeos catalog-suggest">'
+.// 'priceItems: ' . print_r($productItem, true) . '<br/><br/>mediaItems: ' . print_r($mediaItems, true) . '<br/>'
+				'<a class="suggest-item" href="' . $enc->attr( $this->url( $target, $cntl, $action, array( 'd_prodid' => $id ), [], $config ) ).'">
+					<div style="width: 100%;" class="item-name">' . $enc->html( $productItem->getCode() . ': ' . $productItem->getName() ) . '</div>
+					<!--
 					<div class="item-price">' . $enc->html( $price ) . '</div>
 					<div class="item-image" style="background-image: url(' . $enc->attr( $media ) . ')"></div>
+					-->
 				</a>
 			</li>
 		'
