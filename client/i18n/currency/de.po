@@ -424,6 +424,9 @@ msgstr "$"
 msgid "FKP"
 msgstr "£"
 
+msgid "from"
+msgstr "ab"
+
 #. Pound Sterling
 #. reference: https://en.wikipedia.org/wiki/Pound_sterling
 #. code: GBP
