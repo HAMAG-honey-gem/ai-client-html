@@ -27,6 +27,14 @@ msgstr ""
 msgid "company"
 msgstr "Firma"
 
+#. Product attribute
+msgid "height"
+msgstr "Höhe"
+
+#. Product attribute
+msgid "capacity"
+msgstr "Kapazität"
+
 #. Address salutation
 msgid "mr"
 msgstr "Herr"
